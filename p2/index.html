@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>To-Do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="main-cont">
+    <div class="app">
+
+      <div class="app-header">
+        <h2>To-Do List</h2>
+        <button id="darkModeBtn" class="mode-btn">🌙</button>
+      </div>
+
+      <div class="input">
+        <input id="taskInput" type="text" placeholder="Add a task..." />
+        <select id="priorityInput">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+        <input id="categoryInput" type="text" placeholder="Category" />
+        <input id="dueDateInput" type="date" />
+        <button id="addBtn" class="btn">Add</button>
+      </div>
+      <div id="errorMsg" class="error-msg"></div>
+
+      <div class="tools">
+        <input id="searchInput" type="text" placeholder="Search tasks..." />
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
+      <div class="list-cont">
+        <ul id="list" class="list"></ul>
+      </div>
+
+      <div class="counters">
+        <span id="pendingCount">Pending: 0</span>
+        <span id="completedCount">Completed: 0</span>
+      </div>
+
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
