@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maya Ostrand — Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="logo">M. Ostrand</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <p class="eyebrow">Full-Stack Developer</p>
+  <h1>I build fast, clear software for people who'd rather not think about it.</h1>
+  <p>Maya Ostrand — five years turning messy problems into products people actually enjoy using. Currently freelancing, open to new roles.</p>
+  <div class="hero-actions">
+    <a href="#projects" class="btn btn-solid">See my work</a>
+    <a href="#contact" class="btn btn-outline">Get in touch</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=70&auto=format&fit=crop" alt="Portrait of Maya Ostrand">
+    <div>
+      <h2>About</h2>
+      <p>I'm a full-stack developer based in Portland, working mostly in React, Node, and Python. I like projects with a real constraint — a deadline, a dataset, a stubborn user — because that's where the interesting decisions live.</p><br>
+      <p>Before freelancing I spent three years on a small team building internal tools for a logistics company, which is where I learned that the best interface is the one nobody has to think about. Outside of work I restore old synthesizers and run a very slow book club.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><h3>Frontend</h3><p>React, TypeScript, Tailwind, accessible UI patterns</p></div>
+    <div class="skill-card"><h3>Backend</h3><p>Node.js, Python/Django, REST & GraphQL APIs</p></div>
+    <div class="skill-card"><h3>Data</h3><p>PostgreSQL, Redis, basic pipeline design</p></div>
+    <div class="skill-card"><h3>Infra</h3><p>Docker, CI/CD, AWS (EC2, S3, Lambda)</p></div>
+    <div class="skill-card"><h3>Design</h3><p>Figma, design systems, prototyping</p></div>
+    <div class="skill-card"><h3>Practice</h3><p>Testing, code review, technical writing</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=70&auto=format&fit=crop" alt="Ledgerline invoicing dashboard">
+      <div class="project-body">
+        <h3>Ledgerline</h3>
+        <p>A lightweight invoicing tool for freelancers, built with React and Stripe billing.</p>
+        <div class="project-links"><a href="#">Live demo</a><a href="#">Source</a></div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=70&auto=format&fit=crop" alt="Routewise route map">
+      <div class="project-body">
+        <h3>Routewise</h3>
+        <p>A delivery-route optimizer for small logistics teams, cutting average drive time by 18%.</p>
+        <div class="project-links"><a href="#">Case study</a><a href="#">Source</a></div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img class="thumb" src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=600&q=70&auto=format&fit=crop" alt="Fieldnotes note-taking app">
+      <div class="project-body">
+        <h3>Fieldnotes</h3>
+        <p>An offline-first note app for researchers, syncing across devices when back online.</p>
+        <div class="project-links"><a href="#">Live demo</a><a href="#">Source</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="resume-box">
+    <p>A one-page PDF covering experience, tools, and education.</p>
+    <a href="resume.pdf" download="Maya_Ostrand_Resume.pdf" class="btn btn-solid">Download CV</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <form id="contactForm" novalidate>
+    <div class="field" id="nameField">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <div class="error">Please enter your name.</div>
+    </div>
+    <div class="field" id="emailField">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+      <div class="error">Please enter a valid email address.</div>
+    </div>
+    <div class="field" id="messageField">
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+      <div class="error">Message should be at least 10 characters.</div>
+    </div>
+    <button type="submit" class="btn btn-solid" style="align-self:flex-start;">Send message</button>
+    <div id="formStatus"></div>
+  </form>
+</section>
+
+<footer>© 2026 Maya Ostrand — built with HTML, CSS &amp; JS.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

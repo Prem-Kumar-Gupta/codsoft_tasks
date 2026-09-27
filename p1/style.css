@@ -1,0 +1,377 @@
+/* ===== General Page Styles ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #EDEDE6;
+  color: #1B1F1D;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Smooth scrolling when clicking nav links */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ===== Header / Navigation ===== */
+
+header {
+  background-color: #EDEDE6;
+  border-bottom: 1px solid #cccccc;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  color: #1F6F5C;
+  border-bottom: 2px solid #1F6F5C;
+}
+
+/* Hamburger button (hidden on desktop) */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 2px;
+  background-color: #1B1F1D;
+  display: block;
+}
+
+/* Mobile menu styles */
+@media (max-width: 760px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: #EDEDE6;
+    padding: 20px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+
+/* ===== Hero (Home) Section ===== */
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.hero .eyebrow {
+  color: #1F6F5C;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  max-width: 600px;
+}
+
+.hero p {
+  max-width: 550px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.hero-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn-solid {
+  background-color: #1F6F5C;
+  color: white;
+}
+
+.btn-solid:hover {
+  background-color: #18594a;
+}
+
+.btn-outline {
+  border: 2px solid #1B1F1D;
+}
+
+.btn-outline:hover {
+  background-color: #1B1F1D;
+  color: white;
+}
+
+
+/* ===== About Section ===== */
+
+#about .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#about img {
+  width: 100%;
+  max-width: 300px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#about .wrap > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+
+/* ===== Skills Section ===== */
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.skill-card {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.skill-card:hover {
+  border-color: #1F6F5C;
+}
+
+.skill-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.skill-card p {
+  font-size: 14px;
+  color: #555555;
+}
+
+
+/* ===== Projects Section ===== */
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.project-card {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+  flex: 1;
+  min-width: 260px;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card .thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-body {
+  padding: 20px;
+}
+
+.project-body h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.project-body p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 12px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.project-links a {
+  color: #1F6F5C;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* ===== Resume Section ===== */
+
+.resume-box {
+  border: 1px solid #cccccc;
+  padding: 30px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.resume-box p {
+  color: #555555;
+  max-width: 350px;
+}
+
+
+/* ===== Contact Form Section ===== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin-top: 15px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Show the error message only when the field has the "invalid" class */
+.field.invalid .error {
+  display: block;
+}
+
+.field.invalid input,
+.field.invalid textarea {
+  border-color: #c0392b;
+}
+
+#formStatus {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #777777;
+  font-size: 14px;
+}
