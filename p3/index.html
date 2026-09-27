@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fieldnote — Ideas Worth Reading</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<a href="#" class="logo" onclick="showHome()">Fieldnote</a>
+<ul class="navlinks">
+<li><a href="#" onclick="filterCategory('all')">Home</a></li>
+<li><a href="#" onclick="filterCategory('Design')">Design</a></li>
+<li><a href="#" onclick="filterCategory('Tech')">Tech</a></li>
+<li><a href="#" onclick="filterCategory('Life')">Life</a></li>
+</ul>
+<div class="navtools">
+<input id="searchInput" type="text" placeholder="Search articles..." oninput="renderGrid()">
+<button class="iconbtn" onclick="toggleDark()" id="darkBtn">🌙</button>
+<button class="burger">☰</button>
+</div>
+</nav>
+</header>
+
+<main class="wrap">
+<div id="homeView">
+<section class="hero" id="heroSection"></section>
+<section>
+<div class="chips" id="chips"></div>
+<div class="grid" id="grid"></div>
+<button class="loadmore" id="loadMoreBtn" onclick="loadMore()">Load More</button>
+</section>
+</div>
+
+<div id="detailView">
+<span class="back" onclick="showHome()">← Back to articles</span>
+<img class="detail-img" id="detailImg">
+<div class="detail-body">
+<span class="tag" id="detailCat"></span>
+<h1 id="detailTitle"></h1>
+<p class="meta" id="detailMeta"></p>
+<div id="detailContent"></div>
+<div class="share" id="shareBtns"></div>
+<div class="card-tags" id="detailTags"></div>
+</div>
+<div class="related">
+<h3>Related Articles</h3>
+<div class="grid" id="relatedGrid"></div>
+</div>
+<div class="comments">
+<h3>Comments (<span id="commentCount">0</span>)</h3>
+<div id="commentList"></div>
+<div class="comment-form">
+<input id="commentName" placeholder="Your name">
+<textarea id="commentText" placeholder="Write a comment..." rows="3"></textarea>
+<button onclick="addComment()">Post Comment</button>
+</div>
+</div>
+</div>
+</main>
+
+<footer>
+<p>Fieldnote — a small blog about design, code, and everyday life.</p>
+<p style="margin-top:.5rem">© 2026 Fieldnote. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
